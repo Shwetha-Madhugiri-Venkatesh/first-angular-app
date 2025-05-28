@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -12,6 +12,13 @@ export class SearchComponent {
   }
   onclick(event:any){
     console.log(event)
+  }
+  //from child search to parent app
+  @Output()
+  sendingSearchText:EventEmitter<string> = new EventEmitter<string>();
+
+  onSearchTextChange(){
+    this.sendingSearchText.emit(this.searchText);
   }
   click_text:string="";
 }

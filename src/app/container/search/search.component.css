@@ -28,3 +28,12 @@
     margin: 20px auto;
     padding: 10px 140px;
 }
+
+.btn-search-disabled{
+    padding:10px 30px;
+    background-color:lightgray;
+    margin-left:-1px;
+    color:gray;
+    border:gray 1px solid;
+    cursor: not-allowed;
+}

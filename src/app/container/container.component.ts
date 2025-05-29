@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
+//let div1 = document.getElementById("div");
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
@@ -33,4 +35,9 @@ export class ContainerComponent {
   fromSearch(val){
     this.theSearchText=val;
   }
+
+  @ViewChild(ProductListComponent) productListComponent:ProductListComponent;
+  // func(){
+  //   console.log(div1);
+  // }
 }

@@ -15,4 +15,21 @@
     </div> -->
     <app-product-list [searchTextis]="theSearchText" #productListComponent></app-product-list>
     <app-product-details *ngIf="productListComponent.selectedProduct" [product_list_comp]="productListComponent"></app-product-details>
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-product-heading">
+            <h1>Latest Arrival in Popular Brands</h1>
+        </div>
+        <app-featured-brands>
+             <h1 class="title">New Arrivals in Nike</h1>
+             <button class="call-to-action">Learn More about Nike</button>
+        </app-featured-brands>
+        <app-featured-brands>
+             <h1 class="title">New Arrivals in Adidas</h1>
+             <button class="call-to-action">Learn More about Adidas</button>
+        </app-featured-brands>
+        <app-featured-brands>
+             <h1 class="title">New Arrivals in Fester</h1>
+             <button class="call-to-action">Learn More about Fester</button>
+        </app-featured-brands>
+    </div>
 </div>

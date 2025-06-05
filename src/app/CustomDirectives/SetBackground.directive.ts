@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer2 } from "@angular/core";
+import { Directive, ElementRef, Input, Renderer2 } from "@angular/core";
 
 @Directive({
     selector:'[setBackground]',
@@ -12,12 +12,12 @@ export class SetBackground{
     //    ele.nativeElement.style.background='#36454F';
     //    ele.nativeElement.style.color='white';
     }
-
+    @Input('setBackground') inps:{background:string,color:string};
     ngOnInit(){
         // this.ele.nativeElement.style.background='#36454F';
         // this.ele.nativeElement.style.color='white';
-        this.renderer.setStyle(this.ele.nativeElement, 'background', '#36454F');
-        this.renderer.setStyle(this.ele.nativeElement, 'color', 'white');
+        this.renderer.setStyle(this.ele.nativeElement, 'background', this.inps.background);
+        this.renderer.setStyle(this.ele.nativeElement, 'color', this.inps.color);
         //this.renderer.setAttribute(this.ele.nativeElement, 'title', 'this is the renderer example');
     }
 }

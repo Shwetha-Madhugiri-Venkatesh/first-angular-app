@@ -17,6 +17,7 @@ import { FeaturedBrandsComponent } from './container/featured-brands/featured-br
 import { SetBackground } from './CustomDirectives/SetBackground.directive';
 import { HighLightDirective } from './CustomDirectives/high-light.directive';
 import { AppHoverDirective } from './CustomDirectives/app-hover.directive';
+import { DisableProductDirective } from './CustomDirectives/disable-product.directive';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AppHoverDirective } from './CustomDirectives/app-hover.directive';
     SetBackground,
     HighLightDirective,
     AppHoverDirective,
+    DisableProductDirective,
   ],
   imports: [
     BrowserModule,
